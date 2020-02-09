@@ -18,5 +18,3 @@ function startWord(cb) {
 
 exports.default = series(killWord, copy, startWord)
 exports.install = copy
-
-..
