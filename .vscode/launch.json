@@ -7,10 +7,10 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Gulp test",
+            "name": "Gulp default",
             "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
             "args": [
-                "test"
+                "default"
             ],
             "skipFiles": [
                 "<node_internals>/**"

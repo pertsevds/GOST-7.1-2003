@@ -16,5 +16,7 @@ function startWord(cb) {
   return exec('start winword test.docm');
 }
 
-exports.test = series(killWord, copy, startWord)
+exports.default = series(killWord, copy, startWord)
 exports.install = copy
+
+..
