@@ -3,7 +3,7 @@ const { exec } = require('child_process');
 
 
 function copy() {
-  return src('GOST71.xsl').pipe(dest(process.env.APPDATA+'\\Microsoft\\Bibliography\\Style\\'));
+  return src('GOST71.xsl').pipe(dest(process.env.APPDATA + '\\Microsoft\\Bibliography\\Style\\'));
 }
 
 function killWord(cb) {
