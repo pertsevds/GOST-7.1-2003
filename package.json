@@ -1,0 +1,29 @@
+{
+  "name": "gost-7.1-2003",
+  "version": "0.1.0",
+  "description": "ГОСТ 7.1-2003 для MS Word 365.",
+  "main": "GOST71.xsl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davaeron/GOST-7.1-2003.git"
+  },
+  "keywords": [
+    "XSLT-STYLESHEET",
+    "GOST",
+    "MSOFFICE",
+    "MSWORD",
+    "BIBLIOGRAPHY"
+  ],
+  "author": "Pertsev Dmitriy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davaeron/GOST-7.1-2003/issues"
+  },
+  "homepage": "https://github.com/davaeron/GOST-7.1-2003#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

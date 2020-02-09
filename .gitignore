@@ -1,0 +1,8 @@
+
+*.bak
+
+backups/
+
+addon/
+
+node_modules/
