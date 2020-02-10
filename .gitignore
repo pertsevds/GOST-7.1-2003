@@ -1,8 +1,10 @@
 
 *.bak
-
 backups/
-
 addon/
-
 node_modules/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
