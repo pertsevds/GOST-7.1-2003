@@ -37,22 +37,7 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>word-gost</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XML</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>word-gost.xsl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>word-gost</String>
+                                        <String>GOST71</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -89,7 +74,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>file:/C:/Users/davae/OneDrive/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B/OxygenXMLDeveloper/GOST-7.1-2003/GOST71.xsl</String>
+                                    <String>${pdu}/GOST71.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
@@ -154,7 +139,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>word-gost</String>
+                                    <String>GOST71</String>
                                 </field>
                                 <field name="baseURL">
                                     <String></String>
