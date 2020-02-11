@@ -18,7 +18,7 @@ function startWord(cb) {
 }
 
 function transform() {
-  return src('samples\\Sources.xml').dest('samples\\Sources2.xml');
+  return src('samples\\Sources.xml').pipe(dest('samples'));
  //return src('GOST71.xsl').pipe(dest(process.env.APPDATA + '\\Microsoft\\Bibliography\\Style\\'));
 }
 
