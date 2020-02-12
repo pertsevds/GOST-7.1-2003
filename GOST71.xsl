@@ -128,12 +128,15 @@
             <head>
                 <style>p.MsoBibliography</style>
             </head>
+            <xsl:text>&#10;</xsl:text>
             <body>
+                <xsl:text>&#10;</xsl:text>
                 <xsl:for-each select="b:Bibliography">
                     <xsl:apply-templates select="b:Source">
                         <xsl:sort select="b:RefOrder" order="ascending" data-type="number" />
                     </xsl:apply-templates>
                 </xsl:for-each>
+                <xsl:text>&#10;</xsl:text>
             </body>
         </html>
     </xsl:template>
