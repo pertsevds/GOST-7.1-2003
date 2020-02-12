@@ -1,6 +1,5 @@
 const { series, src, dest } = require('gulp');
 const { exec } = require('child_process');
-//const rename = require('gulp-rename');
 
 
 function copy() {
