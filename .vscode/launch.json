@@ -27,7 +27,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ]
-        }
+        },
         {
             "type": "node",
             "request": "launch",
