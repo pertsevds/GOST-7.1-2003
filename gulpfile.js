@@ -1,7 +1,6 @@
 const { series, src, dest } = require('gulp');
 const { exec } = require('child_process');
 const rename = require('gulp-rename');
-//const xslt = require('gulp-xslt');
 
 
 function copy() {
@@ -19,7 +18,7 @@ function startWord(cb) {
 }
 
 function transform() {
-  return src('samples/Sources.xml').pipe(rename('Bibliography.xml')).pipe(dest('samples/'));
+  return exec('libxml/xsltproc.exe -o samples/Bibliorgaphy.xml utils/bibliography.xsl samples/Sources.xml');
 }
 
 exports.default = series(killWord, copy, startWord)
