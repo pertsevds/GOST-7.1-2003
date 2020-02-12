@@ -12,12 +12,16 @@ function killWord(cb) {
   });
 }
 
-function startWord(cb) {
+function startWord() {
   return exec('start winword test.docm');
 }
 
-function transformSourcesToBibliography(cb) {
+function transformSourcesToBibliography() {
   return exec('"libxml/xsltproc" -o samples/Bibliorgaphy.xml utils/bibliography.xsl samples/Sources.xml');
+}
+
+function transformSourcesToCitation() {
+  return exec('"libxml/xsltproc" -o samples/Citation.xml utils/citation.xsl samples/Sources.xml');
 }
 
 function showBibliographyResult(cb) {
@@ -28,8 +32,17 @@ function showBibliographyResult(cb) {
   });
 }
 
+function showCitationResult(cb) {
+  exec('"libxml/xsltproc" GOST71.xsl samples/Bibliorgaphy.xml', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb();
+  });
+}
 
 exports.default = series(killWord, copy, startWord)
 exports.install = copy
 exports.transformSourcesToBibliography = transformSourcesToBibliography
+exports.transformSourcesToCitation = transformSourcesToCitation
 exports.showBibliographyResult = showBibliographyResult
+exports.showCitationResult = showCitationResult
