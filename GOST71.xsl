@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:b="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" b:schemaLocation="http://schemas.openxmlformats.org/officeDocument/2006/bibliography shared-bibliography.xsd">
-    <xsl:output method="html" encoding="utf-8" indent="yes" />
+    <xsl:output method="html" encoding="utf-8" />
     <xsl:template match="/">
         <xsl:call-template name="Start" />
     </xsl:template>
