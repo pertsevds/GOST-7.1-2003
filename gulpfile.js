@@ -48,7 +48,7 @@ function showCitationResult(cb) {
   });
 }
 
-exports.default = series(killWord, copy, startWord)
+exports.default = series(killWord, install, startWord)
 exports.copySourcesToSamples = copySourcesToSamples
 exports.install = install
 exports.installSources = installSources
