@@ -10,7 +10,7 @@ function copySourcesToSamples() {
   return src(process.env.APPDATA + '/Microsoft/Bibliography/Sources.xml').pipe(dest('samples/'));
 }
 
-function insatllSources() {
+function installSources() {
   return src('samples/Sources.xml').pipe(dest(process.env.APPDATA + '/Microsoft/Bibliography/'));
 }
 
