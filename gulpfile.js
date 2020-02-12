@@ -28,7 +28,7 @@ function showBibliographyResult(cb) {
   exec('"libxml/xsltproc" GOST71.xsl samples/Bibliorgaphy.xml', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
-    cb();
+    cb(err);
   });
 }
 
@@ -36,7 +36,7 @@ function showCitationResult(cb) {
   exec('"libxml/xsltproc" GOST71.xsl samples/Bibliorgaphy.xml', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
-    cb();
+    cb(err);
   });
 }
 
