@@ -39,6 +39,30 @@
             "skipFiles": [
                 "<node_internals>/**"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Copy Sources.xml from System to Samples folder",
+            "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+            "args": [
+                "copySourcesToSamples"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Transform Sources.xml",
+            "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+            "args": [
+                "transformSources"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
         }
     ]
 }

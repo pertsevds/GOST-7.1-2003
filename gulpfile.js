@@ -2,8 +2,16 @@ const { series, src, dest } = require('gulp');
 const { exec } = require('child_process');
 
 
-function copy() {
+function install() {
   return src('GOST71.xsl').pipe(dest(process.env.APPDATA + '/Microsoft/Bibliography/Style/'));
+}
+
+function copySourcesToSamples() {
+  return src(process.env.APPDATA + '/Microsoft/Bibliography/Sources.xml').pipe(dest('samples/'));
+}
+
+function insatllSources() {
+  return src('samples/Sources.xml').pipe(dest(process.env.APPDATA + '/Microsoft/Bibliography/'));
 }
 
 function killWord(cb) {
@@ -41,8 +49,9 @@ function showCitationResult(cb) {
 }
 
 exports.default = series(killWord, copy, startWord)
-exports.install = copy
-exports.transformSourcesToBibliography = transformSourcesToBibliography
-exports.transformSourcesToCitation = transformSourcesToCitation
+exports.copySourcesToSamples = copySourcesToSamples
+exports.install = install
+exports.installSources = installSources
+exports.transformSources = series(transformSourcesToBibliography, transformSourcesToCitation)
 exports.showBibliographyResult = showBibliographyResult
 exports.showCitationResult = showCitationResult
