@@ -16,7 +16,14 @@
                 <xsl:text>GOST71</xsl:text>
             </xsl:when>
             <xsl:when test="b:StyleNameLocalized">
-                <xsl:text>ГОСТ 7.1</xsl:text>
+                <xsl:choose>
+                    <xsl:when test="b:StyleNameLocalized/b:Lcid='1049'">
+                      <xsl:text>ГОСТ 7.1 — в порядке упоминания</xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:text>GOST 7.1 - in order of appearance</xsl:text>
+                    </xsl:otherwise>
+                  </xsl:choose>
             </xsl:when>
             <xsl:when test="b:GetImportantFields">
                 <xsl:call-template name="ImportantFields" />
