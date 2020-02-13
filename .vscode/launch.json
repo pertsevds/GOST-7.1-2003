@@ -43,10 +43,10 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Copy Sources.xml from System to Samples folder",
+            "name": "Copy Sources.xml from System to local folder",
             "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
             "args": [
-                "copySourcesToSamples"
+                "copySources"
             ],
             "skipFiles": [
                 "<node_internals>/**"
