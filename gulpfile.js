@@ -25,11 +25,11 @@ function startWord() {
 }
 
 function transformSourcesToBibliography() {
-  return exec('"libxml/xsltproc" -o samples/Bibliorgaphy.xml utils/bibliography.xsl samples/Sources.xml');
+  return exec('"libxml/xsltproc" -o samples/Bibliorgaphy.xml utility-xslts/bibliography.xsl samples/Sources.xml');
 }
 
 function transformSourcesToCitation() {
-  return exec('"libxml/xsltproc" -o samples/Citation.xml utils/citation.xsl samples/Sources.xml');
+  return exec('"libxml/xsltproc" -o samples/Citation.xml utility-xslts/citation.xsl samples/Sources.xml');
 }
 
 function showBibliographyResult(cb) {
