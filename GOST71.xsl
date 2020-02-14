@@ -42,13 +42,10 @@
             <xsl:choose>
                 <xsl:when test="b:GetImportantFields/b:SourceType = 'Book'">
                     <b:ImportantField>
-                        <xsl:text>b:Author/b:Author/b:NameList</xsl:text>
+                        <xsl:text>b:Author/b:NameList</xsl:text>
                     </b:ImportantField>
                     <b:ImportantField>
                         <xsl:text>b:Title</xsl:text>
-                    </b:ImportantField>
-                    <b:ImportantField>
-                        <xsl:text>b:SubTitle</xsl:text>
                     </b:ImportantField>
                     <b:ImportantField>
                         <xsl:text>b:Year</xsl:text>
@@ -60,10 +57,10 @@
                         <xsl:text>b:Edition</xsl:text>
                     </b:ImportantField>
                     <b:ImportantField>
-                        <xsl:text>b:Series</xsl:text>
+                        <xsl:text>b:Publisher</xsl:text>
                     </b:ImportantField>
                     <b:ImportantField>
-                        <xsl:text>b:Volume</xsl:text>
+                        <xsl:text>b:Pages</xsl:text>
                     </b:ImportantField>
                 </xsl:when>
             </xsl:choose>
