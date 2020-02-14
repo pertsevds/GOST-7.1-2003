@@ -4,7 +4,8 @@
   "description": "ГОСТ 7.1-2003 для MS Word 365.",
   "main": "GOST71.xsl",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "checkWithWord": "gulp checkWithWord",
+    "installGost": "gulp installGost"
   },
   "repository": {
     "type": "git",

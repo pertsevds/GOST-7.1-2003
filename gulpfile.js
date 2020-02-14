@@ -8,7 +8,7 @@ function copySources() {
   return src(`${appdata}/Microsoft/Bibliography/Sources.xml`).pipe(dest('sources/'));
 }
 
-function install() {
+function installGost() {
   return src('GOST71.xsl').pipe(dest(`${appdata}/Microsoft/Bibliography/Style/`));
 }
 
@@ -43,8 +43,8 @@ function wellformSources() {
 }
 
 exports.copySources = copySources
-exports.default = series(killWord, install, startWord)
-exports.install = install
+exports.checkWithWord = series(killWord, installGost, startWord)
+exports.installGost = installGost
 exports.installSources = installSources
 exports.showBibliographyResult = showBibliographyResult
 exports.transformSources = series(wellformSources, transformSourcesToBibliography)
