@@ -18,12 +18,12 @@
             <xsl:when test="b:StyleNameLocalized">
                 <xsl:choose>
                     <xsl:when test="b:StyleNameLocalized/b:Lcid='1049'">
-                      <xsl:text>ГОСТ 7.1 — в порядке упоминания</xsl:text>
+                        <xsl:text>ГОСТ 7.1 — в порядке упоминания</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                      <xsl:text>GOST 7.1 - in order of appearance</xsl:text>
+                        <xsl:text>GOST 7.1 - in order of appearance</xsl:text>
                     </xsl:otherwise>
-                  </xsl:choose>
+                </xsl:choose>
             </xsl:when>
             <xsl:when test="b:GetImportantFields">
                 <xsl:call-template name="ImportantFields" />
@@ -99,6 +99,10 @@
         </xsl:for-each>
     </xsl:template>
 
+    <xsl:template name="BibOutput">
+        <xsl:value-of select="b:Title" />
+    </xsl:template>
+
     <xsl:template match="b:Source">
         <xsl:element name="p" xmlns="http://www.w3.org/TR/REC-html40">
             <xsl:attribute name="class">
@@ -122,7 +126,7 @@
                 </xsl:otherwise>
             </xsl:choose>
             <xsl:element name="span">
-                <xsl:value-of select="b:Title" />
+                <xsl:call-template name="BibOutput" />
             </xsl:element>
         </xsl:element>
         <xsl:text>&#10;</xsl:text>
