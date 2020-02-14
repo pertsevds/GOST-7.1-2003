@@ -52,6 +52,6 @@ exports.default = series(killWord, install, startWord)
 exports.copySources = copySources
 exports.install = install
 exports.installSources = installSources
-exports.transformSources = series(transformSourcesToBibliography, transformSourcesToCitation)
+exports.transformSources = parallel(transformSourcesToBibliography, transformSourcesToCitation)
 exports.showBibliographyResult = showBibliographyResult
 exports.showCitationResult = showCitationResult

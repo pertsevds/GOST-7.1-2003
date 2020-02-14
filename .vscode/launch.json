@@ -43,7 +43,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Copy Sources.xml from System to local folder",
+            "name": "Copy Sources.xml from System to Project",
             "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
             "args": [
                 "copySources"
