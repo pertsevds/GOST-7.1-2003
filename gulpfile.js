@@ -1,4 +1,4 @@
-const { series, src, dest } = require('gulp');
+const { parallel, series, src, dest } = require('gulp');
 const { exec } = require('child_process');
 
 
