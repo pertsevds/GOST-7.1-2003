@@ -100,7 +100,7 @@
     </xsl:template>
 
     <xsl:template match="b:Source">
-        <xsl:element name="p">
+        <xsl:element name="p" xmlns="http://www.w3.org/TR/REC-html40">
             <xsl:attribute name="class">
                 <xsl:value-of select="'MsoBibliography'" />
             </xsl:attribute>

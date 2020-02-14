@@ -1,4 +1,4 @@
-const { parallel, series, src, dest } = require('gulp');
+const { series, src, dest } = require('gulp');
 const { exec } = require('child_process');
 
 const xsltproc = '"bin/libxml/xsltproc"';
@@ -30,24 +30,12 @@ function showBibliographyResult(cb) {
   });
 }
 
-function showCitationResult(cb) {
-  exec(`${xsltproc} GOST71.xsl sources/Bibliorgaphy.xml`, (err, stdout, stderr) => {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
-}
-
 function startWord() {
   return exec('start winword test.docm');
 }
 
 function transformSourcesToBibliography() {
   return exec(`${xsltproc} -o sources/Bibliorgaphy.xml utility-xslts/bibliography.xsl sources/Sources.xml`);
-}
-
-function transformSourcesToCitation() {
-  return exec(`${xsltproc} -o sources/Citation.xml utility-xslts/citation.xsl sources/Sources.xml`);
 }
 
 function wellformSources() {
@@ -59,5 +47,4 @@ exports.default = series(killWord, install, startWord)
 exports.install = install
 exports.installSources = installSources
 exports.showBibliographyResult = showBibliographyResult
-exports.showCitationResult = showCitationResult
-exports.transformSources = series(wellformSources, parallel(transformSourcesToBibliography, transformSourcesToCitation))
+exports.transformSources = series(wellformSources, transformSourcesToBibliography)
