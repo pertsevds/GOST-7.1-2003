@@ -125,6 +125,7 @@
                 <xsl:value-of select="b:Title" />
             </xsl:element>
         </xsl:element>
+        <xsl:text>&#10;</xsl:text>
     </xsl:template>
 
     <xsl:template name="Bibliography">
@@ -140,7 +141,6 @@
                         <xsl:sort select="b:RefOrder" order="ascending" data-type="number" />
                     </xsl:apply-templates>
                 </xsl:for-each>
-                <xsl:text>&#10;</xsl:text>
             </body>
         </html>
     </xsl:template>
