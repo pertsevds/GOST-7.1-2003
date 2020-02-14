@@ -48,10 +48,14 @@ function transformSourcesToCitation() {
   return exec('"libxml/xsltproc" -o sources/Citation.xml utility-xslts/citation.xsl sources/Sources.xml');
 }
 
+function wellformSources() {
+  return exec('"libxml/xsltproc" -o sources/Sources.xml utility-xslts/wellform.xsl sources/Sources.xml');
+}
+
 exports.copySources = copySources
 exports.default = series(killWord, install, startWord)
 exports.install = install
 exports.installSources = installSources
 exports.showBibliographyResult = showBibliographyResult
 exports.showCitationResult = showCitationResult
-exports.transformSources = parallel(transformSourcesToBibliography, transformSourcesToCitation)
+exports.transformSources = series(wellformSources, parallel(transformSourcesToBibliography, transformSourcesToCitation))
