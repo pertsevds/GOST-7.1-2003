@@ -1,61 +1,82 @@
 <?xml version="1.0"?>
 <b:Bibliography xmlns:b="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" xmlns="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" SelectedStyle="">
-    <b:Source>
-        <b:Tag>Пет06</b:Tag>
-        <b:SourceType>Book</b:SourceType>
-        <b:Guid>{AA9BF5C1-1979-46DC-A0AB-069D102902F5}</b:Guid>
-        <b:Author>
-            <b:Author>
-                <b:NameList>
-                    <b:Person>
-                        <b:Last>Петрова</b:Last>
-                        <b:First>Н.</b:First>
-                        <b:Middle>О.</b:Middle>
-                    </b:Person>
-                </b:NameList>
-            </b:Author>
-        </b:Author>
-        <b:Title>Как составлять списки литературы</b:Title>
-        <b:Year>2006</b:Year>
-        <b:City>Москва</b:City>
-        <b:Publisher>Издательство "Юрайт"</b:Publisher>
-    </b:Source>
-    <b:Source>
-        <b:Tag>Шип19</b:Tag>
-        <b:SourceType>Misc</b:SourceType>
-        <b:Guid>{1C62BD79-6314-41C0-85D9-642BC9B71432}</b:Guid>
-        <b:Title>Высшая математика. Полный курс в 2 т. Том 1 : учебник для академического
-            бакалавриата</b:Title>
-        <b:Year>2019</b:Year>
-        <b:City>Москва</b:City>
-        <b:Publisher>Издательство Юрайт</b:Publisher>
-        <b:Volume>1</b:Volume>
-        <b:Medium>электронный</b:Medium>
-        <b:YearAccessed>2020</b:YearAccessed>
-        <b:MonthAccessed>02</b:MonthAccessed>
-        <b:DayAccessed>01</b:DayAccessed>
-        <b:URL>https://biblio-online.ru/bcode/434737</b:URL>
-        <b:Author>
-            <b:Author>
-                <b:NameList>
-                    <b:Person>
-                        <b:Last>Шипачев</b:Last>
-                        <b:First>С.</b:First>
-                        <b:Middle>В.</b:Middle>
-                    </b:Person>
-                </b:NameList>
-            </b:Author>
-            <b:Editor>
-                <b:NameList>
-                    <b:Person>
-                        <b:Last>Тихонова</b:Last>
-                        <b:First>А.</b:First>
-                        <b:Middle>Н.</b:Middle>
-                    </b:Person>
-                </b:NameList>
-            </b:Editor>
-        </b:Author>
-        <b:LCID>1049</b:LCID>
-        <b:RefOrder>1</b:RefOrder>
-    </b:Source>
+  <b:Source>
+    <b:Tag>Пет06</b:Tag>
+    <b:SourceType>Book</b:SourceType>
+    <b:Guid>{D642761C-C9AC-4219-AA7D-7AD4EC44DC65}</b:Guid>
+    <b:Author>
+      <b:Author>
+        <b:NameList>
+          <b:Person>
+            <b:Last>Пестовская</b:Last>
+            <b:First>С.</b:First>
+            <b:Middle>Н.</b:Middle>
+          </b:Person>
+        </b:NameList>
+      </b:Author>
+    </b:Author>
+    <b:Title>Английский язык для спасателей. Технология безопасности [Текст] : учеб. пособ.</b:Title>
+    <b:Year>2016</b:Year>
+    <b:City>Архангельск : САФУ</b:City>
+    <b:LCID>1049</b:LCID>
+    <b:RefOrder>2</b:RefOrder>
+    <b:Pages>124</b:Pages>
+    <b:Publisher>Сев. (Аркт.) федер. ун-т им. М. В. Ломоносова</b:Publisher>
+  </b:Source>
+  <b:Source>
+    <b:Tag>Вор12</b:Tag>
+    <b:SourceType>Book</b:SourceType>
+    <b:Guid>{A8614386-CC46-4225-8011-B14271272EA8}</b:Guid>
+    <b:Author>
+      <b:Author>
+        <b:NameList>
+          <b:Person>
+            <b:Last>Воробьев</b:Last>
+            <b:First>В.А.</b:First>
+          </b:Person>
+          <b:Person>
+            <b:Last>Березовская</b:Last>
+            <b:First>Ю.В.</b:First>
+          </b:Person>
+        </b:NameList>
+      </b:Author>
+    </b:Author>
+    <b:Title>Теория систем и системный анализ. Стохастические системы [Текст] : учеб. пособ.</b:Title>
+    <b:Year>2012</b:Year>
+    <b:City>Архангельск: ИПЦ САФУ</b:City>
+    <b:Pages>146</b:Pages>
+    <b:Publisher>Сев. (Аркт.) федер. ун-т им. М. В. Ломоносова</b:Publisher>
+  </b:Source>
+  <b:Source>
+    <b:Tag>Бел15</b:Tag>
+    <b:SourceType>Book</b:SourceType>
+    <b:Guid>{5D95C13A-38D3-4D3E-A5E7-D1632374DE83}</b:Guid>
+    <b:Author>
+      <b:Author>
+        <b:NameList>
+          <b:Person>
+            <b:Last>Белецкая</b:Last>
+            <b:Middle>Г.</b:Middle>
+            <b:First>М.</b:First>
+          </b:Person>
+          <b:Person>
+            <b:Last>Богданович</b:Last>
+            <b:Middle>И.</b:Middle>
+            <b:First>Н.</b:First>
+          </b:Person>
+          <b:Person>
+            <b:Last>Макаревич</b:Last>
+            <b:Middle>А.</b:Middle>
+            <b:First>Н.</b:First>
+          </b:Person>
+        </b:NameList>
+      </b:Author>
+    </b:Author>
+    <b:Title>Технология углеродных адсорбентов. Физико-химический анализ активных углей [Текст] : учеб. пособ. к лаб. практикуму</b:Title>
+    <b:Year>2015</b:Year>
+    <b:City>Архангельск : САФУ</b:City>
+    <b:Pages>95</b:Pages>
+    <b:LCID>1049</b:LCID>
+    <b:Publisher>Сев. (Аркт.) федер. ун-т им. М.В. Ломоносова</b:Publisher>
+  </b:Source>
 </b:Bibliography>
