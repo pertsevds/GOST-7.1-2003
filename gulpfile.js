@@ -1,17 +1,19 @@
 const { parallel, series, src, dest } = require('gulp');
 const { exec } = require('child_process');
 
+const xsltproc = '"bin/libxml/xsltproc"';
+const appdata = `${process.env.APPDATA}`;
 
 function copySources() {
-  return src(process.env.APPDATA + '/Microsoft/Bibliography/Sources.xml').pipe(dest('sources/'));
+  return src(`${appdata}/Microsoft/Bibliography/Sources.xml`).pipe(dest('sources/'));
 }
 
 function install() {
-  return src('GOST71.xsl').pipe(dest(process.env.APPDATA + '/Microsoft/Bibliography/Style/'));
+  return src('GOST71.xsl').pipe(dest(`${appdata}/Microsoft/Bibliography/Style/`));
 }
 
 function installSources() {
-  return src('sources/Sources.xml').pipe(dest(process.env.APPDATA + '/Microsoft/Bibliography/'));
+  return src('sources/Sources.xml').pipe(dest(`${appdata}/Microsoft/Bibliography/`));
 }
 
 function killWord(cb) {
@@ -21,7 +23,7 @@ function killWord(cb) {
 }
 
 function showBibliographyResult(cb) {
-  exec('"libxml/xsltproc" GOST71.xsl sources/Bibliorgaphy.xml', (err, stdout, stderr) => {
+  exec(`${xsltproc} GOST71.xsl sources/Bibliorgaphy.xml`, (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -29,7 +31,7 @@ function showBibliographyResult(cb) {
 }
 
 function showCitationResult(cb) {
-  exec('"libxml/xsltproc" GOST71.xsl sources/Bibliorgaphy.xml', (err, stdout, stderr) => {
+  exec(`${xsltproc} GOST71.xsl sources/Bibliorgaphy.xml`, (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -41,15 +43,15 @@ function startWord() {
 }
 
 function transformSourcesToBibliography() {
-  return exec('"libxml/xsltproc" -o sources/Bibliorgaphy.xml utility-xslts/bibliography.xsl sources/Sources.xml');
+  return exec(`${xsltproc} -o sources/Bibliorgaphy.xml utility-xslts/bibliography.xsl sources/Sources.xml`);
 }
 
 function transformSourcesToCitation() {
-  return exec('"libxml/xsltproc" -o sources/Citation.xml utility-xslts/citation.xsl sources/Sources.xml');
+  return exec(`${xsltproc} -o sources/Citation.xml utility-xslts/citation.xsl sources/Sources.xml`);
 }
 
 function wellformSources() {
-  return exec('"libxml/xsltproc" -o sources/Sources.xml utility-xslts/wellform.xsl sources/Sources.xml');
+  return exec(`${xsltproc} -o sources/Sources.xml utility-xslts/wellform.xsl sources/Sources.xml`);
 }
 
 exports.copySources = copySources
