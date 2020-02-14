@@ -1,8 +1,3 @@
-
-*.bak
-backups/
-addons/
-release/
 node_modules/
 .vscode/*
 !.vscode/tasks.json
